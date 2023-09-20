@@ -2,9 +2,10 @@
 #define __MONTY_H__
 
 
-#include <unistd.h>
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+
 
 #define STACK 0
 #define QUEUE 1
@@ -86,12 +87,13 @@ char *get_int(int n);
 int usage_error(void);
 int malloc_error(void);
 int f_open_error(char *filename);
-int div_error(unsigned int line_number);
+int unknown_op_error(char *opcode, unsigned int line_number);
+int no_int_error(unsigned int line_number);
 int pop_error(unsigned int line_number);
 int pint_error(unsigned int line_number);
-int no_int_error(unsigned int line_number);
-int pchar_error(unsigned int line_number, char *message);
 int short_stack_error(unsigned int line_number, char *op);
-int unknown_op_error(char *opcode, unsigned int line_number);
+int div_error(unsigned int line_number);
+int pchar_error(unsigned int line_number, char *message);
+
 
 #endif /* __MONTY_H__ */
