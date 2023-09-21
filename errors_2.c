@@ -9,11 +9,11 @@ int pchar_error(unsigned int line_number, char *message);
 
 
 /**
- * pop_error - Prints pop error messages for empty stacks.
- * @line_number: Line number in script where error occured.
- *
- * Return: (EXIT_FAILURE) always.
+ * pop_error - the function  prints pop error messages for empty stacks
+ * @line_number: Line number in script where error occured
+ * Return: (EXIT_FAILURE) always
  */
+
 int pop_error(unsigned int line_number)
 {
     fprintf(stderr, "L%u: can't pop an empty stack\n", line_number);
@@ -22,11 +22,11 @@ int pop_error(unsigned int line_number)
 
 
 /**
- * pint_error - Prints pint error messages for empty stacks.
- * @line_number: Line number in Monty bytecodes file where error occurred.
- *
- * Return: (EXIT_FAILURE) always.
+ * pint_error - the function prints pint error messages for empty stacks
+ * @line_number: the line number in Monty bytecodes file where error occurred
+ * Return: (EXIT_FAILURE) always
  */
+
 int pint_error(unsigned int line_number)
 {
     fprintf(stderr, "L%d: can't pint, stack empty\n", line_number);
@@ -50,11 +50,11 @@ int short_stack_error(unsigned int line_number, char *op)
 
 
 /**
- * div_error - Prints division error messages for division by 0.
- * @line_number: Line number in Monty bytecodes file where error occurred.
- *
- * Return: (EXIT_FAILURE) always.
+ * div_error - the function prints division error messages for division by 0
+ * @line_number: the line number in Monty bytecodes file where error occurred
+ * Return: (EXIT_FAILURE) always
  */
+
 int div_error(unsigned int line_number)
 {
     fprintf(stderr, "L%u: division by zero\n", line_number);
@@ -64,12 +64,12 @@ int div_error(unsigned int line_number)
 
 /**
  * pchar_error - Prints pchar error messages for empty stacks
- *               empty stacks and non-character values.
- * @line_number: Line number in Monty bytecodes file where error occurred.
- * @message: The corresponding error message to print.
- *
+ * empty stacks and non-character values
+ * @line_number: the line number in Monty bytecodes file where error occurred
+ * @message: The corresponding error message to print
  * Return: (EXIT_FAILURE) always.
  */
+
 int pchar_error(unsigned int line_number, char *message)
 {
     fprintf(stderr, "L%u: can't pchar, %s\n", line_number, message);
